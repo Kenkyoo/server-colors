@@ -7,7 +7,7 @@ const cors = require('cors')
 app.use(cors());
 
 app.get('/', (req, res) => {
-    let data = fs.readFileSync('../../colornames.json');
+    let data = fs.readFileSync('colornames.json');
     let colorNames = JSON.parse(data);
     res.json(colorNames);
 })
